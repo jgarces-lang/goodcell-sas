@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel administrativo Good Cell">
+  <title>Admin | Good Cell</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar-wrap">
+    <nav class="navbar" id="navbar">
+      <a class="navbar__brand" href="./index.html" aria-label="Ir al inicio de Good Cell">
+        <img
+          class="navbar__brand-logo"
+          src="../img/logo-good-cell.png"
+          alt="Logo Good Cell"
+          onerror="this.style.display='none'"
+        >
+        GOOD CELL
+      </a>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema"></button>
+
+      <button
+        class="navbar__toggle"
+        id="navbarToggle"
+        type="button"
+        aria-label="Abrir menu de navegacion"
+        aria-expanded="false"
+        aria-controls="navbarMenu"
+      >
+        ☰
+      </button>
+
+      <ul class="navbar__menu" id="navbarMenu">
+        <li><a class="navbar__link" href="./index.html">Inicio</a></li>
+        <li><a class="navbar__link" href="./producto.html">Detalle</a></li>
+        <li><a class="navbar__link navbar__link--active" href="./admin.html">Admin</a></li>
+        <li>
+          <a
+            class="navbar__cta"
+            href="https://wa.me/573105000800?text=Hola%20Good%20Cell%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container admin">
+    <section>
+      <h1 class="section-title">Panel de administracion</h1>
+      <p class="section-subtitle">Gestiona productos y categorias conectados a MySQL.</p>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Formulario de producto</h2>
+        <form id="productForm">
+          <input type="hidden" id="productId">
+          <div class="form-grid">
+            <div>
+              <label class="field-label" for="productCategory">Categoria</label>
+              <select class="select" id="productCategory" name="categoria_id" required></select>
+            </div>
+            <div>
+              <label class="field-label" for="productName">Nombre</label>
+              <input class="input" id="productName" name="nombre" type="text" required>
+            </div>
+            <div>
+              <label class="field-label" for="productBrand">Marca</label>
+              <input class="input" id="productBrand" name="marca" type="text" required>
+            </div>
+            <div>
+              <label class="field-label" for="productPrice">Precio</label>
+              <input class="input" id="productPrice" name="precio" type="number" min="0" required>
+            </div>
+            <div>
+              <label class="field-label" for="productStock">Stock</label>
+              <input class="input" id="productStock" name="stock" type="number" min="0" required>
+            </div>
+            <div>
+              <label class="field-label" for="productImage">URL imagen</label>
+              <input class="input" id="productImage" name="imagen" type="text" placeholder="../img/producto-placeholder.png">
+            </div>
+            <div style="grid-column: 1 / -1;">
+              <label class="field-label" for="productDescription">Descripcion</label>
+              <textarea class="textarea" id="productDescription" name="descripcion" rows="3" required></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Guardar producto</button>
+          </div>
+        </form>
+      </article>
+
+      <article class="card">
+        <h2>Formulario de categoria</h2>
+        <form id="categoryForm">
+          <input type="hidden" id="categoryId">
+          <div class="form-grid">
+            <div>
+              <label class="field-label" for="categoryName">Nombre</label>
+              <input class="input" id="categoryName" name="nombre" type="text" required>
+            </div>
+            <div>
+              <label class="field-label" for="categoryDescription">Descripcion</label>
+              <input class="input" id="categoryDescription" name="descripcion" type="text" required>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Guardar categoria</button>
+            <button class="btn btn--danger" id="resetDataBtn" type="button">Recargar desde servidor</button>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <section class="card">
+      <h3>Productos</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Categoria</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="productsTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Categorias</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="categoriesTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    Good Cell SAS - Panel conectado con backend PHP
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalle de producto Good Cell SAS">
+  <title>Detalle de Producto | Good Cell</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar-wrap">
+    <nav class="navbar" id="navbar">
+      <a class="navbar__brand" href="./index.html" aria-label="Ir al inicio de Good Cell">
+        <img
+          class="navbar__brand-logo"
+          src="../img/logo-good-cell.png"
+          alt="Logo Good Cell"
+          onerror="this.style.display='none'"
+        >
+        GOOD CELL
+      </a>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema"></button>
+
+      <button
+        class="navbar__toggle"
+        id="navbarToggle"
+        type="button"
+        aria-label="Abrir menu de navegacion"
+        aria-expanded="false"
+        aria-controls="navbarMenu"
+      >
+        ☰
+      </button>
+
+      <ul class="navbar__menu" id="navbarMenu">
+        <li><a class="navbar__link" href="./index.html">Inicio</a></li>
+        <li><a class="navbar__link navbar__link--active" href="./producto.html">Detalle</a></li>
+        <li><a class="navbar__link" href="./admin.html">Admin</a></li>
+        <li>
+          <a
+            class="navbar__cta"
+            href="https://wa.me/573105000800?text=Hola%20Good%20Cell%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container product-detail">
+    <section>
+      <h1 class="section-title">Detalle del producto</h1>
+      <p class="section-subtitle">Informacion completa y contacto directo por WhatsApp.</p>
+    </section>
+
+    <section id="productDetail"></section>
+  </main>
+
+  <footer class="footer-note">
+    Good Cell SAS - Experiencia premium en tecnologia
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

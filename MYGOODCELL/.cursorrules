@@ -1,0 +1,90 @@
+# Proyecto: Good Cell SAS — Tienda de Tecnología Premium
+
+## Contexto del proyecto
+Good Cell SAS es una tienda de tecnología premium ubicada en Pereira, Colombia.
+Este proyecto es simultáneamente la página web real del negocio y el proyecto
+final universitario de Juan José, estudiante de Tecnología en Desarrollo de
+Software en la Universidad Tecnológica de Pereira (UTP).
+
+## Datos del negocio
+- Nombre: Good Cell SAS
+- Ciudad: Pereira, Colombia
+- WhatsApp: +57 310 5000800
+- Dominio: goodcell.com
+- Hosting: Bluehost (PHP + MySQL incluidos)
+
+## Stack tecnológico
+- Frontend: HTML + CSS + JavaScript (sin frameworks)
+- Backend: PHP
+- Base de datos: MySQL
+- Hosting: Bluehost
+
+## Estructura del proyecto
+MYGOODCELL/
+├── frontend/
+│   ├── pages/
+│   │   ├── index.html      → Catálogo principal
+│   │   ├── producto.html   → Detalle de producto
+│   │   └── admin.html      → Panel de administración
+│   ├── css/
+│   │   └── style.css       → Estilos globales
+│   ├── js/
+│   │   └── main.js         → Lógica del frontend
+│   └── img/                → Imágenes de productos y logo
+├── backend/
+│   ├── api/                → Endpoints PHP
+│   └── config/             → Conexión a base de datos
+└── database/               → Scripts SQL
+
+## Base de datos MySQL (goodcell_db)
+Tablas creadas:
+- categorias (id, nombre, descripcion, imagen, activo, creado_en)
+- productos (id, categoria_id, nombre, descripcion, precio, imagen, marca, stock, activo, creado_en)
+- usuarios (id, nombre, email, contrasena_hash, rol, activo, creado_en)
+- pedidos (id, nombre_cliente, telefono, total, estado, nota_whatsapp, creado_en)
+- detalle_pedido (id, pedido_id, producto_id, cantidad, precio_unit, subtotal)
+
+## Categorías en la base de datos (7)
+1. Parlantes (JBL, BOSE)
+2. Audífonos (Shokz)
+3. Apple
+4. Gaming (Logitech, Redragon)
+5. Fotografía (Fujifilm)
+6. Hogar Inteligente (Amazon Alexa)
+7. Accesorios (Belkin)
+
+## Productos actuales (14)
+- BOSE S1 Pro+ → $3.500.000 → Parlantes
+- JBL Neo One Compact → $3.000.000 → Parlantes
+- Shokz Open Dots → $800.000 → Audífonos
+- Shokz OpenRun Pro 2 Garmin → $950.000 → Audífonos
+- Apple Adaptador USB-C 20W → $120.000 → Apple
+- Apple Pencil USB-C → $550.000 → Apple
+- Logitech G502 Hero → $280.000 → Gaming
+- Teclado Redragon Horus TKL → $350.000 → Gaming
+- Fujifilm Instax Mini 12 → $400.000 → Fotografía
+- Impresora Instax Mini Link 3 → $550.000 → Fotografía
+- Alexa Echo Pop → $270.000 → Hogar Inteligente
+- Alexa Echo Dot → $320.000 → Hogar Inteligente
+- Belkin Batería 10K MagSafe → $350.000 → Accesorios
+- Cable Belkin USB-A Lightning → $100.000 → Accesorios
+
+## Diseño visual
+- Tema principal: oscuro (fondo #0A0A0A)
+- Color acento: verde #4ADE80 (conecta con logo Good Cell)
+- Tema claro disponible con toggle
+- Estilo inspirado en: Razer.com + Apple.com
+- Mobile first (responsive)
+
+## Páginas del sistema
+1. index.html → Catálogo con búsqueda, filtros por categoría y grid de productos
+2. producto.html → Detalle completo del producto con botón WhatsApp
+3. admin.html → Panel CRUD de productos y categorías (protegido con login)
+
+## Reglas de desarrollo
+- Todo el código comentado en español
+- Mobile first → luego desktop
+- Los precios en pesos colombianos con formato $X.XXX.XXX
+- El botón de contacto siempre abre WhatsApp con mensaje predefinido
+- Sin librerías externas (vanilla JS, CSS puro)
+- Compatible con PHP en Bluehost

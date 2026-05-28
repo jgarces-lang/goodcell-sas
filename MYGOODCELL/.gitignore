@@ -1,0 +1,22 @@
+# Cosas de entorno/sistema
+.DS_Store
+Thumbs.db
+
+# Configuraciones de editores
+.vscode/
+.idea/
+
+# Si llegas a usar Node en el backend más adelante
+node_modules/
+.envPlaintext
+# Cosas de entorno/sistema
+.DS_Store
+Thumbs.db
+
+# Configuraciones de editores
+.vscode/
+.idea/
+
+# Si llegas a usar Node en el backend más adelante
+node_modules/
+.env

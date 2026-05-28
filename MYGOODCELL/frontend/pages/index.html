@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Good Cell SAS - Tienda de tecnología premium en Pereira.">
+  <title>Good Cell SAS | Tecnología Premium</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar-wrap">
+    <nav class="navbar" id="navbar">
+      <a class="navbar__brand" href="./index.html" aria-label="Ir al inicio de Good Cell">
+        <img
+          class="navbar__brand-logo"
+          src="../img/logo-good-cell.png"
+          alt="Logo Good Cell"
+          onerror="this.style.display='none'"
+        >
+        GOOD CELL
+      </a>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema"></button>
+
+      <button
+        class="navbar__toggle"
+        id="navbarToggle"
+        type="button"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="navbarMenu"
+      >
+        ☰
+      </button>
+
+      <ul class="navbar__menu" id="navbarMenu">
+        <li><a class="navbar__link navbar__link--active" href="./index.html">Inicio</a></li>
+        <li><a class="navbar__link" href="#productos">Productos</a></li>
+        <li><a class="navbar__link" href="./producto.html">Detalle</a></li>
+        <li><a class="navbar__link" href="./admin.html">Admin</a></li>
+        <li>
+          <a
+            class="navbar__cta"
+            href="https://wa.me/573105000800?text=Hola%20Good%20Cell%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <article class="hero__card">
+        <span class="hero__pill">Tecnología Premium en Pereira</span>
+        <h1 class="hero__title">Catalogo Good Cell</h1>
+        <p class="hero__text">
+          Encuentra audio, Apple, gaming, fotografia y hogar inteligente con atencion personalizada por WhatsApp.
+        </p>
+
+        <div class="searchbar" role="search">
+          <svg class="searchbar__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M10 2a8 8 0 1 1 5.293 13.707l4 4a1 1 0 0 1-1.414 1.414l-4-4A8 8 0 0 1 10 2Zm0 2a6 6 0 1 0 0 12a6 6 0 0 0 0-12Z"/>
+          </svg>
+          <label class="sr-only" for="searchInput">Buscar productos</label>
+          <input
+            class="input"
+            id="searchInput"
+            type="search"
+            placeholder="Buscar productos premium..."
+          >
+        </div>
+      </article>
+    </section>
+
+    <section id="productos">
+      <h2 class="section-title">Productos destacados</h2>
+      <p class="section-subtitle">Usa busqueda y categorias para filtrar el catalogo.</p>
+
+      <div class="catalog-controls">
+        <div>
+          <p class="field-label">Categorias</p>
+          <div class="chips" id="categoryChips" aria-label="Filtro por categoria"></div>
+          <label class="sr-only" for="categoryFilter">Categoria (fallback)</label>
+          <select class="select sr-only" id="categoryFilter">
+            <option value="">Todas las categorias</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="productsCount" class="catalog-stats"></p>
+      <div id="productsGrid" class="products-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    Good Cell SAS - Pereira, Colombia - WhatsApp: +57 310 5000800
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
