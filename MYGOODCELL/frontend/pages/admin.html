@@ -52,9 +52,31 @@
   </header>
 
   <main class="container admin">
-    <section>
-      <h1 class="section-title">Panel de administracion</h1>
-      <p class="section-subtitle">Gestiona productos y categorias conectados a MySQL.</p>
+    <header class="admin-header">
+      <div>
+        <h1 class="section-title">Panel de administración</h1>
+        <p class="section-subtitle">Gestiona productos y categorías conectados a MySQL.</p>
+      </div>
+      <span class="admin-badge">Admin</span>
+    </header>
+
+    <section class="stats-grid" id="statsGrid">
+      <div class="stat-card">
+        <span class="stat-card__value" id="statProducts">0</span>
+        <span class="stat-card__label">Total productos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value" id="statCategories">0</span>
+        <span class="stat-card__label">Categorías</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value" id="statStock">0</span>
+        <span class="stat-card__label">Stock total</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value" id="statActive">0</span>
+        <span class="stat-card__label">Productos activos</span>
+      </div>
     </section>
 
     <section class="grid-2">
