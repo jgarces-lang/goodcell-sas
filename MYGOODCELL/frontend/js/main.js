@@ -3,7 +3,7 @@
    ========================================================= */
 
 (function () {
-  const API_BASE = "../../backend/api";
+  const API_BASE = "http://localhost:8000/api";
   const THEME_KEY = "goodcell_theme";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -372,8 +372,8 @@
     let productos = [];
     try {
       const [categoriasRes, productosRes] = await Promise.all([
-        apiRequest("categorias.php"),
-        apiRequest("productos.php")
+        apiRequest("categorias"),
+        apiRequest("productos")
       ]);
       categorias = categoriasRes.data || [];
       productos = productosRes.data || [];
@@ -935,7 +935,7 @@
 
   function init() {
     setupPageTransitions();
-    
+
     setupButtonRipple();
     setupGlowBrand();
     setupHeroEffects();

@@ -6,17 +6,13 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Si llegas a usar Node en el backend más adelante
+# Node
 node_modules/
-.envPlaintext
-# Cosas de entorno/sistema
-.DS_Store
-Thumbs.db
 
-# Configuraciones de editores
-.vscode/
-.idea/
-
-# Si llegas a usar Node en el backend más adelante
-node_modules/
+# Variables de entorno
 .env
+
+# Python
+__pycache__/
+venv/
+*.pyc
