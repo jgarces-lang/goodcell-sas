@@ -130,10 +130,8 @@ MYGOODCELL/
 
 ---
 
-## 👨‍💻 Integrantes
+## Integrantes
 
-- Yerbray Valencia Abello
-- Mario Trujillo Mansalve
-- Valeria Taborda
+- Juan Esteban Garces Giraldo
 
 **Versión:** 1.0.0 | **Sistema:** Good Cell SAS | **Año:** 2025
