@@ -3,7 +3,7 @@
 
 ## CONTEXTO DEL PROYECTO
 
-Soy Juan José Restrepo, estudiante de Tecnología en Desarrollo de Software 
+Soy Juan Garces, estudiante de Tecnología en Desarrollo de Software 
 en la Universidad Tecnológica de Pereira (UTP), Colombia.
 
 Este proyecto tiene dos propósitos simultáneos:
@@ -270,7 +270,7 @@ sudo tail -f /opt/lampp/logs/error_log
 
 ## NOTA PARA LA IA
 
-Juan José es estudiante principiante aprendiendo mientras construye.
+Juan Garces es estudiante principiante aprendiendo mientras construye.
 Explica cada concepto paso a paso, usa analogías simples.
 Cuando hagas cambios al código, explica qué cambiaste y por qué.
 Prefiere cambios pequeños e incrementales sobre refactorizaciones grandes.
