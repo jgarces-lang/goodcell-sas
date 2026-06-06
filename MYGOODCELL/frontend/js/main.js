@@ -9,7 +9,7 @@
 
   async function apiRequest(endpoint, options) {
     const response = await fetch(API_BASE + "/" + endpoint, Object.assign({
-      credentials: "include"
+      credentials: "omit"
     }, options || {}));
 
     let payload = null;
