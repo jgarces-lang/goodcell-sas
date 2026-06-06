@@ -3,7 +3,7 @@
    ========================================================= */
 
 (function () {
-  const API_BASE = "http://localhost:8000/api";
+  const API_BASE = "http://goodcell-sas.onrender.com/api";
   const THEME_KEY = "goodcell_theme";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
